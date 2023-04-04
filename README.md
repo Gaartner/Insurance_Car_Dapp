@@ -11,7 +11,7 @@ Upload the following smart contract files to Remix IDE:
 - Claim_Handling_dep.sol
 - Claim_Processing_dep.sol
 - Customer.sol
-- 
+
 Compile each smart contract file in Remix IDE.
 
 Install MetaMask and Ganache.
