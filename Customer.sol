@@ -26,10 +26,12 @@ contract customerContract {
   // Constructeur pour créer un client par défaut lors de la création du contrat
   constructor() {
     addCustomer("GOV Kevin", "Mercedes", ALL_RISK, 1690761600); // expirationDate = 31/07/2023
-    addCustomer("HO Pierre-Louis", "BMW", "All-Risk", 1643587200); // expirationDate = 31/01/2022
-    addCustomer("LE BARAZER Leo", "Renault", THIRD_PARTY, 1698710400); // expirationDate = 31/10/2023
-    addCustomer("DUPONT Tom", "Peugeot", "Third-Party", 1672444800); // expirationDate = 31/12/2022
-  }
+    addCustomer("LIN Amaury", "BMW", "All-Risk", 1643587200); // expirationDate = 31/01/2022
+    addCustomer("ZHANG thierry", "Renault", THIRD_PARTY, 1698710400); // expirationDate = 31/10/2023
+    addCustomer("KUGBLENU Jean-Ludovic", "Peugeot", THIRD_PARTY, 1672444800); // expirationDate = 31/12/2022
+    addCustomer("EL ANZI Sofiane", "Audi", "All-Risk", 1704123667); // expirationDate = 01/01/2024
+    addCustomer("MARTINS SARDINHA Alexandre", "Ferrari", THIRD_PARTY, 1630156438); // expirationDate = 28/08/2021
+    }
 
   
   // Fonction pour ajouter un nouveau client au contrat
