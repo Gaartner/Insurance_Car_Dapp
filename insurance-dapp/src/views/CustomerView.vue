@@ -37,6 +37,7 @@ export default {
   },
 
   mounted() {
+	
     const Web3 = require('web3');
 	const providerUrl = 'http://localhost:7545'; // Replace with your Ganache provider URL
 	const web3 = new Web3(new Web3.providers.HttpProvider(providerUrl));
@@ -237,7 +238,6 @@ export default {
 	let contract = new web3.eth.Contract(contractAbi, '0xE17De20a1AE2A81E5E3EA749E66f5Cb6F566e81d');
 
 	let cpt = 0
-	let tmp = []
 	function getCustomer() {
 		contract.methods.getCustomer(cpt).call({ gas: 1000000 }).then((result) => {
 			const customer = {
@@ -249,8 +249,6 @@ export default {
 			if (customer.customerName == "") {
 				console.log("Finished fetching customers");
 			} else {
-				tmp.push(customer);
-				
 				const table = document.getElementById('myTable'); 
 				const newRow = table.insertRow();
 				const nameCell = newRow.insertCell();
@@ -263,15 +261,13 @@ export default {
 				dateCell.textContent = customer.expirationDate;
 
 				cpt = cpt + 1;
-				getCustomer(); 
+				getCustomer();
 			}
 		}).catch((error) => {
 			console.error(error);
 		});
 	}
 	getCustomer();
-	console.log(tmp);
-
 },
 }
 
